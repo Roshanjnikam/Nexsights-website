@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- CONTACT HERO -->
+<section class="hero">
+  <h1>Contact Us</h1>
+  <p>Let’s discuss how Nexsights can help your business grow.</p>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+  <div class="contact-grid">
+
+    <!-- CONTACT FORM -->
+    <div class="contact-form">
+      <h2>Send a Message</h2>
+
+      {% if success %}
+        <p style="color: green; margin-bottom: 15px;">
+          Your message has been sent successfully.
+        </p>
+      {% endif %}
+
+      <form method="post" class="form">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <!-- CONTACT INFO -->
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+      <p><strong>Email:</strong> contact@nexsights.com</p>
+      <p><strong>Location:</strong> India</p>
+
+      <div class="contact-note">
+        <p>
+          We typically respond within 24 hours.
+          Feel free to reach out for consultations or inquiries.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

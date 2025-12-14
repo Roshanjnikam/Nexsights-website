@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ service.title }} | Nexsights{% endblock %}
+
+{% block content %}
+
+
+<!-- HERO -->
+<section class="hero">
+  <h1>{{ service.title }}</h1>
+  <p>{{ service.desc }}</p>
+</section>
+
+<!-- PROBLEM SECTION -->
+<section class="cards">
+  <div class="card">
+    <h3>Problem We Solve</h3>
+    <p>
+      Many businesses struggle with unclear data, inefficient processes,
+      or outdated systems. This service is designed to solve real-world
+      business challenges using data and technology.
+    </p>
+  </div>
+</section>
+
+<!-- OFFERINGS -->
+<section class="cards">
+  <div class="card">
+    <h3>What We Offer</h3>
+    <ul style="margin-top:15px;">
+      {% for point in service.points %}
+        <li style="margin-bottom:10px;">✔ {{ point }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="cards">
+  <div class="card">
+    <h3>How We Work</h3>
+    <ol style="margin-top:15px; padding-left:20px;">
+      <li>Understand business goals & requirements</li>
+      <li>Analyze data / systems</li>
+      <li>Design the right solution</li>
+      <li>Implement & validate</li>
+      <li>Support & optimization</li>
+    </ol>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="cards">
+  <div class="card">
+    <h3>Tools & Technologies</h3>
+    <p>
+      Python • Excel • Power BI • Pandas • Scikit-learn • Django •
+      Modern Web Technologies
+    </p>
+  </div>
+</section>
+
+<!-- WHO IT IS FOR -->
+<section class="cards">
+  <div class="card">
+    <h3>Who This Is For</h3>
+    <ul style="margin-top:15px;">
+      <li>✔ Startups & Founders</li>
+      <li>✔ Small & Medium Businesses</li>
+      <li>✔ Operations & Analytics Teams</li>
+      <li>✔ Product & Strategy Teams</li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cards">
+  <div class="card" style="text-align:center;">
+    <h3>Ready to Get Started?</h3>
+    <p>Let’s discuss how this service can help your business grow.</p>
+    <a href="/contact/">
+      <button style="margin-top:20px;">Contact Nexsights</button>
+    </a>
+  </div>
+</section>
+
+{% endblock %}
+
+

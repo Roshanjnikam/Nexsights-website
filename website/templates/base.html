@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<title>{% block title %}Nexsights | Data, AI & Business Consulting{% endblock %}</title>
+
+
+<link rel="stylesheet" href="/static/css/style.css">
+
+
+<!-- SEO META TAGS -->
+<meta name="description" content="Nexsights provides data analytics, machine learning, AI solutions, business consulting, and website development services.">
+<meta name="keywords" content="Data Analytics, Machine Learning, AI Consulting, Business Consulting, Website Development, Nexsights">
+<meta name="author" content="Nexsights">
+
+<!-- Mobile SEO -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Open Graph (LinkedIn / WhatsApp preview) -->
+<meta property="og:title" content="Nexsights | Data, AI & Business Consulting">
+<meta property="og:description" content="Data-driven consulting, AI solutions, and modern websites to scale your business.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nexsights.com">
+
+
+
+</head>
+<body>
+
+
+<header class="navbar">
+<div class="logo">NexSights</div>
+<nav>
+<a href="/">Home</a>
+<a href="/about/">About</a>
+<a href="/services/">Services</a>
+<a href="/contact/">Contact</a>
+</nav>
+</header>
+
+
+<main class="container">
+{% block content %}{% endblock %}
+</main>
+
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <h3>NexSights</h3>
+      <p>Business consulting & AI-driven data solutions.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Company</h4>
+      <a href="/">Home</a>
+      <a href="/about/">About</a>
+      <a href="/services/">Services</a>
+      <a href="/contact/">Contact</a>
+    </div>
+
+    <div class="footer-services">
+      <h4>Services</h4>
+      <a href="/services/data-analytics/">Data Analytics</a>
+      <a href="/services/machine-learning/">Machine Learning</a>
+      <a href="/services/ai-models/">AI Models</a>
+      <a href="/services/consulting/">Consulting</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact</h4>
+      <p>Email: contact@nexsights.com</p>
+      <p>India</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2023 Nexsights. All rights reserved.
+  </div>
+</footer>
+
+<button id="scrollTopBtn" title="Go to top">↑</button>
+
+
+<script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+  window.onscroll = function () {
+    if (document.documentElement.scrollTop > 200) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
+  };
+
+  scrollBtn.onclick = function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
+</script>
+
+
+</body>
+</html>
