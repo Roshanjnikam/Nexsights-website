@@ -54,7 +54,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 ROOT_URLCONF = 'nexsights_site.urls'
 
@@ -142,4 +142,4 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 ALLOWED_HOSTS = ["*"]
 
-
+WHITENOISE_MAX_AGE = 60 * 60 * 24 * 365  # 1 year

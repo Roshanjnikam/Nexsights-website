@@ -1,69 +1,142 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<!-- HERO SECTION -->
+<!-- HERO SECTION WITH VIDEO -->
 <section class="hero">
+
   <h1>Turning Data into Strategic Decisions</h1>
   <p>
     Nexsights helps businesses unlock growth through
-    data analytics, machine learning, AI solutions, and
-    technology-driven consulting.
+    data analysis, MIS reporting, dashboards, automation,
+    and AI-driven solutions.
   </p>
-  <a href="/services/">
-    <button>Explore Our Services</button>
-  </a>
+
+  <!-- DASHBOARD PREVIEW VIDEO -->
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    style="
+      width:100%;
+      max-width:900px;
+      margin:30px auto 0;
+      border-radius:18px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+      display:block;
+    "
+  >
+    <source src="/static/videos/dashboard-demo.mp4" type="video/mp4">
+  </video>
+
+  <div style="margin-top:30px;">
+    <a href="/services/sample-work/">
+      <button>View Sample Work</button>
+    </a>
+    <a href="/contact/" style="margin-left:15px;">
+      <button style="background:#ffffff;color:#0f172a;">
+        Get a Custom Dashboard
+      </button>
+    </a>
+  </div>
+
 </section>
 
-<!-- WHY NEXSIGHTS -->
+
+<!-- TRUST / VALUE SECTION -->
 <section class="cards">
   <div class="card">
-    <h3>📊 Data-First Approach</h3>
+    <h3>📊 Data That Makes Sense</h3>
     <p>
-      We transform complex data into clear insights
-      that support confident business decisions.
+      We don’t just analyze data — we explain what it means
+      for your business, your growth, and your next decision.
     </p>
   </div>
 
   <div class="card">
-    <h3>🤖 AI & ML Expertise</h3>
+    <h3>📈 Business-Focused Thinking</h3>
     <p>
-      From predictive models to intelligent automation,
-      we build AI solutions aligned with real business goals.
+      Our approach combines business understanding with analytics,
+      ensuring insights are practical, actionable, and relevant.
     </p>
   </div>
 
   <div class="card">
-    <h3>📈 Business-Focused Consulting</h3>
+    <h3>⚙️ Automation & Efficiency</h3>
     <p>
-      Strategy-led consulting that combines analytics,
-      technology, and industry understanding.
+      Reduce manual work, reporting delays, and data errors through
+      smart automation and streamlined workflows.
     </p>
   </div>
 </section>
 
-<!-- SERVICES PREVIEW -->
+<!-- SERVICES SUMMARY -->
 <section class="hero" style="margin-top:60px;">
-  <h2>What We Do</h2>
+  <h2>What We Help You With</h2>
   <p>
-    End-to-end solutions designed to help startups
-    and growing businesses scale efficiently.
+    End-to-end data and analytics services designed to
+    improve visibility, efficiency, and performance.
   </p>
-
-  <a href="/services/">
-    <button>View All Services</button>
-  </a>
 </section>
 
-<!-- CALL TO ACTION -->
 <section class="cards">
   <div class="card">
-    <h3>🚀 Ready to Grow with Data?</h3>
+    <h3>📊 Data & Business Analysis</h3>
     <p>
-      Partner with Nexsights to turn insights into impact.
-      Let’s build smarter, data-driven solutions together.
+      Understand trends, performance gaps, and opportunities
+      using structured data and business analysis.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>🗂 MIS Reporting & Dashboards</h3>
+    <p>
+      Accurate MIS reports and interactive dashboards
+      built with Excel and Power BI for faster decisions.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>🧹 Data Cleanup & Automation</h3>
+    <p>
+      Clean, reliable datasets and automated processes
+      that save time and reduce operational risk.
+    </p>
+  </div>
+
+  <div class="card">
+    <h3>🤖 AI & Machine Learning</h3>
+    <p>
+      Predictive models and AI solutions built to solve
+      real business problems — not just experiments.
+    </p>
+  </div>
+</section>
+
+<!-- WHY CHOOSE NEXSIGHTS -->
+<section class="cards">
+  <div class="card">
+    <h3>Why Nexsights?</h3>
+    <p>
+      ✔ Practical, business-first approach<br>
+      ✔ Clear communication (no jargon)<br>
+      ✔ Flexible engagement models<br>
+      ✔ Focus on measurable outcomes
+    </p>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="cards">
+  <div class="card" style="text-align:center;">
+    <h3>🚀 Ready to Use Data More Effectively?</h3>
+    <p>
+      Whether you need better reporting, cleaner data,
+      smarter dashboards, or AI-driven insights —
+      Nexsights is here to help.
     </p>
     <a href="/contact/">
-      <button>Contact Us</button>
+      <button>Contact Nexsights</button>
     </a>
   </div>
 </section>

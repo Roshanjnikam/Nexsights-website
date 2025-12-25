@@ -1,9 +1,7 @@
 {% extends 'base.html' %}
-
 {% block title %}{{ service.title }} | Nexsights{% endblock %}
 
 {% block content %}
-
 
 <!-- HERO -->
 <section class="hero">
@@ -11,79 +9,174 @@
   <p>{{ service.desc }}</p>
 </section>
 
-<!-- PROBLEM SECTION -->
+{% if service.is_sample %}
+
+<!-- ================= SAMPLE WORK SECTION ================= -->
+
+
+<!-- SAMPLE WORK : DASHBOARD PORTFOLIO -->
+
 <section class="cards">
   <div class="card">
-    <h3>Problem We Solve</h3>
-    <p>
-      Many businesses struggle with unclear data, inefficient processes,
-      or outdated systems. This service is designed to solve real-world
-      business challenges using data and technology.
+    <h3>📊 Dashboard Sample Work</h3>
+    <p style="opacity:0.9;">
+      Below is a combined preview of real-world dashboards designed by Nexsights,
+      showcasing both operational and financial insights for business decision-makers.
     </p>
+
+    <img
+      src="/static/images/dashboard-sample.png"
+      alt="Nexsights Dashboard Sample"
+      style="width:100%; border-radius:14px; margin:20px 0;"
+    >
+
   </div>
 </section>
 
-<!-- OFFERINGS -->
+<!-- SALES & REVENUE DASHBOARD -->
+<section class="cards">
+  <div class="card">
+    <h3>📈 Sales & Revenue Dashboard (Excel)</h3>
+
+    <h4>Overview</h4>
+    <p>
+      The Nexsights Sales & Revenue Dashboard provides a clear, startup-style overview
+      of business sales performance using Excel. It is designed for quick understanding
+      and easy decision-making, even for non-technical users.
+    </p>
+
+    <h4>What This Dashboard Shows</h4>
+    <ul class="service-list">
+      <li>✔ Total sales and total orders at a glance</li>
+      <li>✔ Month-on-month sales growth</li>
+      <li>✔ Top-performing product or service</li>
+      <li>✔ Sales trends across months</li>
+      <li>✔ Region-wise sales distribution</li>
+      <li>✔ Product-wise revenue comparison</li>
+    </ul>
+
+    <h4>How This Helps Businesses</h4>
+    <ul class="service-list">
+      <li>✔ Quickly track overall sales performance</li>
+      <li>✔ Identify top products and high-performing regions</li>
+      <li>✔ Monitor growth trends without complex reports</li>
+      <li>✔ Make faster, data-driven decisions using Excel</li>
+    </ul>
+  </div>
+</section>
+
+<!-- EXPENSE & PROFIT DASHBOARD -->
+<section class="cards">
+  <div class="card">
+    <h3>💰 Expense & Profit Dashboard (Power BI)</h3>
+
+    <h4>Overview</h4>
+    <p>
+      The Nexsights Expense & Profit Dashboard delivers a modern and professional
+      view of company finances using Power BI. It focuses on profitability,
+      cost control, and financial clarity for business owners and management teams.
+    </p>
+
+    <h4>What This Dashboard Shows</h4>
+    <ul class="service-list">
+      <li>✔ Total expenses and net profit</li>
+      <li>✔ Profit margin percentage</li>
+      <li>✔ Budget variance indicators</li>
+      <li>✔ Expense breakdown by category</li>
+      <li>✔ Profit and expense trends over time</li>
+      <li>✔ Pending invoices (overdue & due soon)</li>
+    </ul>
+
+    <h4>How This Helps Businesses</h4>
+    <ul class="service-list">
+      <li>✔ Gain clear visibility into expenses and profits</li>
+      <li>✔ Improve cost control and profitability</li>
+      <li>✔ Track financial performance in one place</li>
+      <li>✔ Support better budgeting and planning</li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHY NEXSIGHTS -->
+<section class="cards">
+  <div class="card">
+    <h3>Why Nexsights Dashboards</h3>
+    <ul class="service-list">
+      <li>✔ Clean, modern, and easy-to-understand design</li>
+      <li>✔ Built for business owners, not just analysts</li>
+      <li>✔ Focused on insights, not just visuals</li>
+      <li>✔ Works with Excel & Power BI</li>
+      <li>✔ Fully customizable for any industry</li>
+    </ul>
+  </div>
+</section>
+
+
+
+<section class="cards">
+  <div class="card cta-card">
+    <h3>Want Similar Work for Your Business?</h3>
+    <p>
+      These samples demonstrate the approach and quality of work.
+      Let’s build solutions tailored to your business needs.
+    </p>
+    <a href="/contact/">
+      <button>Contact Nexsights</button>
+    </a>
+  </div>
+</section>
+
+{% else %}
+
+<!-- ================= NORMAL SERVICES (UNCHANGED) ================= -->
+
+<section class="cards">
+  <div class="card">
+    <h3>Problem We Solve</h3>
+    <p>{{ service.problem }}</p>
+  </div>
+</section>
+
 <section class="cards">
   <div class="card">
     <h3>What We Offer</h3>
-    <ul style="margin-top:15px;">
-      {% for point in service.points %}
-        <li style="margin-bottom:10px;">✔ {{ point }}</li>
+    <ul class="service-list">
+      {% for item in service.offers %}
+        <li>✔ {{ item }}</li>
       {% endfor %}
     </ul>
   </div>
 </section>
 
-<!-- PROCESS -->
 <section class="cards">
   <div class="card">
     <h3>How We Work</h3>
-    <ol style="margin-top:15px; padding-left:20px;">
-      <li>Understand business goals & requirements</li>
-      <li>Analyze data / systems</li>
-      <li>Design the right solution</li>
-      <li>Implement & validate</li>
-      <li>Support & optimization</li>
+    <ol class="process-list">
+      {% for step in service.process %}
+        <li>{{ step }}</li>
+      {% endfor %}
     </ol>
   </div>
 </section>
 
-<!-- TOOLS -->
 <section class="cards">
   <div class="card">
     <h3>Tools & Technologies</h3>
-    <p>
-      Python • Excel • Power BI • Pandas • Scikit-learn • Django •
-      Modern Web Technologies
-    </p>
+    <p>{{ service.tools }}</p>
   </div>
 </section>
 
-<!-- WHO IT IS FOR -->
 <section class="cards">
-  <div class="card">
-    <h3>Who This Is For</h3>
-    <ul style="margin-top:15px;">
-      <li>✔ Startups & Founders</li>
-      <li>✔ Small & Medium Businesses</li>
-      <li>✔ Operations & Analytics Teams</li>
-      <li>✔ Product & Strategy Teams</li>
-    </ul>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cards">
-  <div class="card" style="text-align:center;">
+  <div class="card cta-card">
     <h3>Ready to Get Started?</h3>
-    <p>Let’s discuss how this service can help your business grow.</p>
+    <p>Let’s discuss how Nexsights can help your business.</p>
     <a href="/contact/">
-      <button style="margin-top:20px;">Contact Nexsights</button>
+      <button>Contact Nexsights</button>
     </a>
   </div>
 </section>
 
-{% endblock %}
+{% endif %}
 
+{% endblock %}
 
