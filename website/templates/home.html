@@ -13,21 +13,25 @@
 
   <!-- DASHBOARD PREVIEW VIDEO -->
   <video
-    autoplay
-    muted
-    loop
-    playsinline
-    style="
-      width:100%;
-      max-width:900px;
-      margin:30px auto 0;
-      border-radius:18px;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.2);
-      display:block;
-    "
-  >
-    <source src="/static/videos/dashboard-demo.mp4" type="video/mp4">
-  </video>
+  autoplay
+  muted
+  loop
+  playsinline
+  preload="none"
+  loading="lazy"
+  poster="/static/images/dashboard-sample.png"
+  style="
+    width:100%;
+    max-width:900px;
+    margin:30px auto 0;
+    border-radius:18px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+    display:block;
+  "
+>
+  <source src="/static/videos/dashboard-demo.mp4" type="video/mp4">
+</video>
+
 
   <div style="margin-top:30px;">
     <a href="/services/sample-work/">

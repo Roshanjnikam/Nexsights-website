@@ -326,3 +326,36 @@ button:hover {
     font-size: 0.9rem;
   }
 }
+
+
+/* ================= INNER PAGE HERO FIX ================= */
+
+.hero-inner {
+  background: linear-gradient(135deg, #2563eb, #0f172a);
+  color: white;
+  padding: 50px 20px;      /* smaller height */
+  text-align: center;
+  margin-top: 0;           /* FIX gap */
+  border-radius: 0;        /* clean edge */
+}
+
+.hero-inner h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.hero-inner p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero-inner {
+    padding: 40px 16px;
+  }
+
+  .hero-inner h1 {
+    font-size: 1.8rem;
+  }
+}
