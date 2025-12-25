@@ -5,9 +5,7 @@
 
 <title>{% block title %}Nexsights | Data, AI & Business Consulting{% endblock %}</title>
 
-
 <link rel="stylesheet" href="/static/css/style.css">
-
 
 <!-- SEO META TAGS -->
 <meta name="description" content="Nexsights provides data analytics, machine learning, AI solutions, business consulting, and website development services.">
@@ -17,34 +15,33 @@
 <!-- Mobile SEO -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Open Graph (LinkedIn / WhatsApp preview) -->
+<!-- Open Graph -->
 <meta property="og:title" content="Nexsights | Data, AI & Business Consulting">
 <meta property="og:description" content="Data-driven consulting, AI solutions, and modern websites to scale your business.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nexsights.com">
 
-
-
 </head>
 <body>
 
-
+<!-- NAVBAR -->
 <header class="navbar">
-<div class="logo">NexSights</div>
-<nav>
-<a href="/">Home</a>
-<a href="/about/">About</a>
-<a href="/services/">Services</a>
-<a href="/contact/">Contact</a>
-</nav>
+  <div class="logo">NexSights</div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/services/">Services</a>
+    <a href="/contact/">Contact</a>
+  </nav>
 </header>
 
-
-<main class="container">
-{% block content %}{% endblock %}
+<!-- MAIN CONTENT (FIXED) -->
+<main class="page-container">
+  {% block content %}
+  {% endblock %}
 </main>
 
-
+<!-- FOOTER -->
 <footer class="footer">
   <div class="footer-container">
 
@@ -63,20 +60,20 @@
 
     <div class="footer-services">
       <h4>Services</h4>
-       <a href="/services/data-analysis/">Data Analysis</a>
-       <a href="/services/business-analysis/">Business Analysis</a>
-       <a href="/services/mis-reporting/">MIS Reporting</a>
-       <a href="/services/excel-power-bi-dashboards/">Excel & Power BI Dashboards</a>
-       <a href="/services/data-cleanup-automation/">Data Cleanup & Automation</a>
-       <a href="/services/website-development/">Website Development</a>
-       <a href="/services/ai-model-building/">AI Model Building</a>
-       <a href="/services/sample-work/">Sample Work</a>
+      <a href="/services/data-analysis/">Data Analysis</a>
+      <a href="/services/business-analysis/">Business Analysis</a>
+      <a href="/services/mis-reporting/">MIS Reporting</a>
+      <a href="/services/excel-power-bi-dashboards/">Excel & Power BI Dashboards</a>
+      <a href="/services/data-cleanup-automation/">Data Cleanup & Automation</a>
+      <a href="/services/website-development/">Website Development</a>
+      <a href="/services/ai-model-building/">AI Model Building</a>
+      <a href="/services/sample-work/">Sample Work</a>
     </div>
 
     <div class="footer-contact">
       <h4>Contact</h4>
       <p>Email: contact@nexsights.com</p>
-      <p>Mobile number: +91 9309763408 </p>
+      <p>Mobile: +91 9309763408</p>
       <p>India</p>
     </div>
 
@@ -89,26 +86,18 @@
 
 <button id="scrollTopBtn" title="Go to top">↑</button>
 
-
 <script>
   const scrollBtn = document.getElementById("scrollTopBtn");
 
   window.onscroll = function () {
-    if (document.documentElement.scrollTop > 200) {
-      scrollBtn.style.display = "block";
-    } else {
-      scrollBtn.style.display = "none";
-    }
+    scrollBtn.style.display =
+      document.documentElement.scrollTop > 200 ? "block" : "none";
   };
 
   scrollBtn.onclick = function () {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 </script>
-
 
 </body>
 </html>
