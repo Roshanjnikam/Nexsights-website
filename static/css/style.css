@@ -1,23 +1,22 @@
-/* ================= PAGE CONTAINER ================= */
-.page-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-
-/* RESET */
+  /* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: "Segoe UI", system-ui, sans-serif;
 }
 
 body {
   background: #f6f8fc;
   color: #1f2937;
   line-height: 1.6;
+}
+
+/* ================= LAYOUT CONTAINER (FIX) ================= */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
 }
 
 /* ================= NAVBAR ================= */
@@ -36,7 +35,6 @@ body {
   color: #ffffff;
   font-size: 1.6rem;
   font-weight: 700;
-  letter-spacing: 0.5px;
 }
 
 .navbar a {
@@ -44,7 +42,6 @@ body {
   text-decoration: none;
   margin-left: 20px;
   font-weight: 500;
-  transition: color 0.3s;
 }
 
 .navbar a:hover {
@@ -55,11 +52,10 @@ body {
 .hero {
   background: linear-gradient(135deg, #2563eb, #0f172a);
   color: white;
-  padding: 80px 20px;
-  border-radius: 20px;
+  padding: 90px 20px;
+  border-radius: 18px;
   text-align: center;
-  margin-top: 35px;
-  animation: fadeUp 0.8s ease-out;
+  margin-top: 20px;
 }
 
 .hero h1 {
@@ -72,72 +68,51 @@ body {
   opacity: 0.95;
 }
 
-/* ================= BUTTONS ================= */
+/* ================= BUTTON ================= */
 button {
-  margin-top: 16px;
-  padding: 10px 18px;
+  margin-top: 18px;
+  padding: 12px 22px;
   background: #38bdf8;
   border: none;
   border-radius: 8px;
-  font-size: 0.9rem;
   font-weight: 600;
-  color: #0f172a;
   cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+  box-shadow: 0 10px 22px rgba(56,189,248,0.35);
 }
 
-/* ================= SERVICES CARDS ================= */
+/* ================= CARDS GRID (FIXED) ================= */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
   margin-top: 40px;
 }
 
+/* ================= CARD (FIXED) ================= */
 .card {
   background: #ffffff;
-  padding: 16px;
-  border-radius: 12px;
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
-  max-width: 320px;
-  margin: auto;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: slideUp 0.6s ease forwards;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.08);
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: none;     /* 🔥 FIX */
+  margin: 0;           /* 🔥 FIX */
 }
 
 .card h3 {
-  font-size: 1.05rem;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .card p {
-  font-size: 0.92rem;
-  line-height: 1.45;
+  font-size: 0.95rem;
 }
-
-/* Card animation delay */
-.card:nth-child(1) { animation-delay: 0.1s; }
-.card:nth-child(2) { animation-delay: 0.2s; }
-.card:nth-child(3) { animation-delay: 0.3s; }
-.card:nth-child(4) { animation-delay: 0.4s; }
-.card:nth-child(5) { animation-delay: 0.5s; }
-.card:nth-child(6) { animation-delay: 0.6s; }
 
 /* ================= FORMS ================= */
 .form {
-  max-width: 480px;
-  margin-top: 30px;
+  max-width: 520px;
 }
 
 .form input,
@@ -147,21 +122,14 @@ button:hover {
   margin-bottom: 14px;
   border-radius: 8px;
   border: 1px solid #cbd5f5;
-  font-size: 0.9rem;
-}
-
-.form input:focus,
-.form textarea:focus {
-  outline: none;
-  border-color: #38bdf8;
 }
 
 /* ================= FOOTER ================= */
 .footer {
   background: #020617;
   color: #cbd5f5;
-  margin-top: 70px;
-  padding: 50px 20px 20px;
+  margin-top: 80px;
+  padding: 60px 20px 20px;
 }
 
 .footer-container {
@@ -169,18 +137,13 @@ button:hover {
   margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 35px;
+  gap: 40px;
 }
 
 .footer h3,
 .footer h4 {
-  color: #ffffff;
+  color: white;
   margin-bottom: 10px;
-}
-
-.footer p,
-.footer a {
-  font-size: 0.9rem;
 }
 
 .footer a {
@@ -188,7 +151,6 @@ button:hover {
   color: #cbd5f5;
   text-decoration: none;
   margin-bottom: 6px;
-  transition: color 0.3s;
 }
 
 .footer a:hover {
@@ -200,169 +162,19 @@ button:hover {
   margin-top: 30px;
   padding-top: 12px;
   text-align: center;
-  font-size: 0.8rem;
-  opacity: 0.7;
+  font-size: 0.85rem;
 }
 
-/* ================= SCROLL TO TOP ================= */
+/* ================= SCROLL TOP ================= */
 #scrollTopBtn {
   position: fixed;
   bottom: 26px;
   right: 26px;
-  background: #38bdf8;
-  color: #020617;
-  border-radius: 50%;
   width: 44px;
   height: 44px;
-  font-size: 20px;
+  border-radius: 50%;
+  background: #38bdf8;
+  border: none;
   cursor: pointer;
   display: none;
-  box-shadow: 0 10px 25px rgba(56,189,248,0.35);
-}
-
-/* ================= ANIMATIONS ================= */
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ================= MOBILE ================= */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-}
-
-
-/* ================= MOBILE OPTIMIZATION ================= */
-@media (max-width: 768px) {
-
-  /* HERO SECTION */
-  .hero {
-    padding: 60px 16px;
-    border-radius: 16px;
-  }
-
-  .hero h1 {
-    font-size: 1.9rem;
-    line-height: 1.25;
-  }
-
-  .hero p {
-    font-size: 0.95rem;
-    margin-top: 10px;
-  }
-
-  /* HERO VIDEO */
-  .hero video {
-    margin-top: 20px;
-    border-radius: 14px;
-    box-shadow: 0 18px 36px rgba(0,0,0,0.2);
-  }
-
-  /* BUTTONS STACK */
-  .hero div {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 24px;
-  }
-
-  .hero button {
-    width: 100%;
-    padding: 12px;
-    font-size: 0.95rem;
-  }
-
-  /* CARDS */
-  .cards {
-    grid-template-columns: 1fr;
-    gap: 16px;
-    margin-top: 30px;
-  }
-
-  .card {
-    max-width: 100%;
-    padding: 16px;
-  }
-
-  .card h3 {
-    font-size: 1rem;
-  }
-
-  .card p {
-    font-size: 0.9rem;
-  }
-
-  /* FOOTER */
-  .footer-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .footer a {
-    margin-bottom: 6px;
-  }
-}
-
-/* EXTRA SMALL DEVICES */
-@media (max-width: 420px) {
-  .hero h1 {
-    font-size: 1.7rem;
-  }
-
-  .hero p {
-    font-size: 0.9rem;
-  }
-}
-
-
-/* ================= INNER PAGE HERO FIX ================= */
-
-.hero-inner {
-  background: linear-gradient(135deg, #2563eb, #0f172a);
-  color: white;
-  padding: 50px 20px;      /* smaller height */
-  text-align: center;
-  margin-top: 0;           /* FIX gap */
-  border-radius: 0;        /* clean edge */
-}
-
-.hero-inner h1 {
-  font-size: 2.2rem;
-  margin-bottom: 10px;
-}
-
-.hero-inner p {
-  font-size: 1rem;
-  opacity: 0.9;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .hero-inner {
-    padding: 40px 16px;
-  }
-
-  .hero-inner h1 {
-    font-size: 1.8rem;
-  }
 }
