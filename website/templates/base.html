@@ -1,31 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
 
-<title>{% block title %}Nexsights | Data, AI & Business Consulting{% endblock %}</title>
+  <title>{% block title %}Nexsights | Data, AI & Business Consulting{% endblock %}</title>
 
-<link rel="stylesheet" href="/static/css/style.css?v=2025">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/static/css/style.css">
 
+  <!-- SEO -->
+  <meta name="description" content="Nexsights provides data analytics, AI, business consulting, dashboards, automation, and website development services.">
+  <meta name="keywords" content="Data Analytics, AI, Business Analysis, Power BI, Excel Dashboards, Automation, Website Development">
+  <meta name="author" content="Nexsights">
 
-<!-- SEO META TAGS -->
-<meta name="description" content="Nexsights provides data analytics, machine learning, AI solutions, business consulting, and website development services.">
-<meta name="keywords" content="Data Analytics, Machine Learning, AI Consulting, Business Consulting, Website Development, Nexsights">
-<meta name="author" content="Nexsights">
-
-<!-- Mobile SEO -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Open Graph -->
-<meta property="og:title" content="Nexsights | Data, AI & Business Consulting">
-<meta property="og:description" content="Data-driven consulting, AI solutions, and modern websites to scale your business.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://nexsights.com">
+  <!-- VIEWPORT -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 <body>
 
-<!-- NAVBAR -->
+<!-- ================= NAVBAR ================= -->
 <header class="navbar">
   <div class="logo">NexSights</div>
   <nav>
@@ -36,21 +30,21 @@
   </nav>
 </header>
 
-<!-- MAIN CONTENT (FIXED) -->
+<!-- ================= MAIN CONTENT ================= -->
 <main class="container">
   {% block content %}{% endblock %}
 </main>
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="footer-container">
 
-    <div class="footer-brand">
+    <div>
       <h3>NexSights</h3>
-      <p>Business consulting & AI-driven data solutions.</p>
+      <p>Business-first data, analytics & AI solutions.</p>
     </div>
 
-    <div class="footer-links">
+    <div>
       <h4>Company</h4>
       <a href="/">Home</a>
       <a href="/about/">About</a>
@@ -58,7 +52,7 @@
       <a href="/contact/">Contact</a>
     </div>
 
-    <div class="footer-services">
+    <div>
       <h4>Services</h4>
       <a href="/services/data-analysis/">Data Analysis</a>
       <a href="/services/business-analysis/">Business Analysis</a>
@@ -70,7 +64,7 @@
       <a href="/services/sample-work/">Sample Work</a>
     </div>
 
-    <div class="footer-contact">
+    <div>
       <h4>Contact</h4>
       <p>Email: contact@nexsights.com</p>
       <p>Mobile: +91 9309763408</p>
@@ -80,23 +74,19 @@
   </div>
 
   <div class="footer-bottom">
-    © 2023 Nexsights.
+    © 2025 Nexsights. All rights reserved.
   </div>
 </footer>
 
-<button id="scrollTopBtn" title="Go to top">↑</button>
+<!-- Scroll to top -->
+<button id="scrollTopBtn">↑</button>
 
 <script>
-  const scrollBtn = document.getElementById("scrollTopBtn");
-
-  window.onscroll = function () {
-    scrollBtn.style.display =
-      document.documentElement.scrollTop > 200 ? "block" : "none";
+  const btn = document.getElementById("scrollTopBtn");
+  window.onscroll = () => {
+    btn.style.display = window.scrollY > 200 ? "block" : "none";
   };
-
-  scrollBtn.onclick = function () {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  btn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
 </script>
 
 </body>
